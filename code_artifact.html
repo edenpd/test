@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סימפוניה של אדם ומכונה - מצגת אגף</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Assistant & Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Assistant', 'Rubik', sans-serif;
+            background-color: #050811;
+        }
+        .slide {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .glow-emerald {
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+        }
+        .glow-red {
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.15);
+        }
+    </style>
+</head>
+<body class="text-slate-100 overflow-hidden h-screen flex flex-col justify-between">
+
+    <!-- Background Decoration Grid & Glow -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none z-0"></div>
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none z-0"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+    <!-- Header / Branding -->
+    <header class="w-full px-8 py-6 flex justify-between items-center z-10 border-b border-gray-800/40 bg-[#050811]/80 backdrop-blur">
+        <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="text-xs uppercase tracking-widest font-bold text-emerald-400">Spec-Driven Development</span>
+        </div>
+        <div class="text-sm font-semibold text-slate-400">
+            סימפוניה של אדם ומכונה <span class="mx-1 text-gray-600">|</span> <span class="text-slate-500">מצגת בוקר אגף</span>
+        </div>
+    </header>
+
+    <!-- Main Slide Container -->
+    <main class="flex-grow flex items-center justify-center px-6 md:px-16 z-10 relative">
+        
+        <!-- SLIDE 1: Hero Hook -->
+        <section id="slide-1" class="slide active w-full max-w-5xl flex-col items-center text-center justify-center py-8">
+            <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest mb-4 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">מפעל תוכנה מבוסס AI</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight mb-8 mt-2">
+                לכתוב קוד זה <span class="text-slate-400 font-light">קל</span>.<br>
+                לבנות מוצר זה <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">קשה</span>.
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
+                איך רתמנו את ה-AI מקודד אוטומטי למתודולוגיה מקצה לקצה ששומרת על הארכיטקטורה והאיכות.
+            </p>
+        </section>
+
+        <!-- SLIDE 2: The Cast -->
+        <section id="slide-2" class="slide w-full max-w-6xl flex-col justify-center py-6">
+            <div class="text-center mb-8">
+                <span class="text-emerald-400 font-semibold text-sm">ההרכב המנצח</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mt-1">הסימפוניה החדשה של הפיתוח</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">
+                <!-- User/Navigator Card -->
+                <div class="bg-slate-900/50 border border-gray-800 rounded-2xl p-6 glow-emerald hover:border-emerald-500/30 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A2 2 0 013 15.485V5.122a2 2 0 011.022-1.743L9 1.62l.022.012zM9 20l7-3.5m-7 3.5v-12m7 12l5.447-2.724A2 2 0 0021 15.485V5.122a2 2 0 00-1.022-1.743L15 1.62M16 16.5v-12"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">המיישם (הנווט)</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">מגדיר את הדרך ישירות מול המשתמש, מייצר PRD ומאשר אב-טיפוס חי ומהיר.</p>
+                </div>
+                <!-- Tester Card -->
+                <div class="bg-slate-900/50 border border-gray-800 rounded-2xl p-6 glow-emerald hover:border-emerald-500/30 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">הבודק (הזקיף)</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">מגן על האיכות עוד לפני שנכתבה שורת קוד אחת על ידי בדיקת ה-Spec.</p>
+                </div>
+                <!-- Dev Card -->
+                <div class="bg-slate-900/50 border border-gray-800 rounded-2xl p-6 glow-emerald hover:border-emerald-500/30 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">המפתח (הבונה)</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">יוצק ארכיטקטורה איתנה ומייצר קוד נקי ומהיר בעזרת ה-B-MAD.</p>
+                </div>
+                <!-- TL Card -->
+                <div class="bg-slate-900/50 border border-gray-800 rounded-2xl p-6 glow-emerald hover:border-emerald-500/30 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">ראש הצוות (המנצח)</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">מטמיע את ה-Git וסביבת ה-AI, ומפקח שהרכבת תישאר תמיד על המסילה.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: The Process -->
+        <section id="slide-3" class="slide w-full max-w-5xl flex-col justify-center py-6">
+            <div class="text-center mb-10">
+                <span class="text-emerald-400 font-semibold text-sm">זרימת העבודה</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mt-1">מגרסת טיוטה לגרסת ייצור ב-4 שלבים</h2>
+            </div>
+
+            <!-- Timeline Diagram -->
+            <div class="relative flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-8 md:gap-4 mt-4">
+                <!-- Center Line for Desktop -->
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-800 -translate-y-1/2 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="flex md:flex-col items-center md:text-center z-10 w-full md:w-1/4 gap-4 md:gap-0">
+                    <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 font-bold mb-3 shadow-lg shrink-0">1</div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">אב-טיפוס מהיר</h4>
+                        <p class="text-xs text-slate-400 px-2">המיישם מגבש רעיון ו-PRD, ומקבל אישור משתמשים מיידי על פרוטוטיפ.</p>
+                        <span class="inline-block mt-2 text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded uppercase font-mono">PRD & Draft</span>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex md:flex-col items-center md:text-center z-10 w-full md:w-1/4 gap-4 md:gap-0">
+                    <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 font-bold mb-3 shadow-lg shrink-0">2</div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">ארכיטקטורה משותפת</h4>
+                        <p class="text-xs text-slate-400 px-2">המפתח, המיישם וה-AI מגבשים את ה-Spec יחד. הכל מנוהל ב-Git.</p>
+                        <span class="inline-block mt-2 text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded uppercase font-mono">Spec & Git</span>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex md:flex-col items-center md:text-center z-10 w-full md:w-1/4 gap-4 md:gap-0">
+                    <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 font-bold mb-3 shadow-lg shrink-0">3</div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">בדיקות ביום אפס</h4>
+                        <p class="text-xs text-slate-400 px-2">הבודק מתחיל להריץ תרחישים על ה-Spec עוד לפני שיש קוד.</p>
+                        <span class="inline-block mt-2 text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded uppercase font-mono">Zero-Day QA</span>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex md:flex-col items-center md:text-center z-10 w-full md:w-1/4 gap-4 md:gap-0">
+                    <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 font-bold mb-3 shadow-lg shrink-0">4</div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">פיתוח ואוטומציה</h4>
+                        <p class="text-xs text-slate-400 px-2">המפתח מייצר קוד עם B-MAD. הבודק מריץ אוטומציה שהוצעה ע"י ה-AI.</p>
+                        <span class="inline-block mt-2 text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded uppercase font-mono">B-MAD Code & Test</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: Superpowers (Modified) -->
+        <section id="slide-4" class="slide w-full max-w-6xl flex-col justify-center py-6">
+            <div class="text-center mb-8">
+                <span class="text-emerald-400 font-semibold text-sm">האימפקט האמיתי</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mt-1">כוחות העל החדשים שגילינו</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mt-4">
+                <!-- Column 1: User on Day Zero -->
+                <div class="bg-slate-900/40 border border-gray-800 p-6 rounded-2xl relative overflow-hidden group hover:border-emerald-500/40 transition">
+                    <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl"></div>
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">המשתמש כשותף ב"יום אפס"</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        במקום לחכות לסוף הפיתוח, המשתמש מקבל אב-טיפוס חי ואינטראקטיבי בשלב מוקדם מאוד. הוא מעיר, משנה ומאשר מיד – אין יותר "זה לא מה שהתכוונתי אליו".
+                    </p>
+                </div>
+
+                <!-- Column 2: Git for Spec -->
+                <div class="bg-slate-900/40 border border-gray-800 p-6 rounded-2xl relative overflow-hidden group hover:border-emerald-500/40 transition">
+                    <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl"></div>
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">האפיון מנוהל ב-Git</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        כל קבצי ה-Spec וה-PRD של המיישמים מנוהלים ומתועדים כמו קוד. קל לעקוב אחרי שינויים, להשוות גרסאות ולחזור אחורה בלחיצת כפתור אחת.
+                    </p>
+                </div>
+
+                <!-- Column 3: Automated Quality -->
+                <div class="bg-slate-900/40 border border-gray-800 p-6 rounded-2xl relative overflow-hidden group hover:border-emerald-500/40 transition">
+                    <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl"></div>
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">איכות משולשת ואוטומציה</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        ה-AI מציף פערים עוד באפיון. הבודק בונה תרחישים חכמים ואוטומציה במהירות, כשכל המשימות והבאגים נפתחים ומנוהלים בג'ירה "מאחורי הקלעים" באופן אוטומטי.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: Reality Check -->
+        <section id="slide-5" class="slide w-full max-w-4xl flex-col items-center justify-center text-center py-8">
+            <span class="text-xs font-bold text-red-400 uppercase tracking-widest bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 mb-6">שיעור בצניעות</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
+                כשה-AI מחליט להיות<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-400">ארכיטקט עצמאי</span>
+            </h2>
+            
+            <div class="bg-slate-900/80 border border-red-500/20 p-8 rounded-2xl max-w-2xl glow-red mt-4">
+                <p class="text-lg text-slate-300 leading-relaxed mb-4">
+                    "בואו נדבר תכלס: AI הוא לא קוסם. אם משאירים את ה-B-MAD לבד, הוא ימציא ארכיטקטורה יצירתית מדי שאין לה קשר למערכת."
+                </p>
+                <div class="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent my-4"></div>
+                <p class="text-base font-bold text-red-400">
+                    חוק בל יעבור: Peer Review אנושי וקפדני של כל הצוות אחרי כל שלב של ה-AI.
+                </p>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: The Trap -->
+        <section id="slide-6" class="slide w-full max-w-5xl flex-col justify-center py-6">
+            <div class="text-center mb-8">
+                <span class="text-red-400 font-semibold text-sm">האתגר התרבותי</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mt-1">מלכודת ה-"זה הרי לוקח שנייה ב-AI"</h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 w-full mt-4">
+                <!-- Side A: The Illusion -->
+                <div class="flex-1 bg-gradient-to-br from-red-950/20 to-slate-900 border border-red-500/20 p-8 rounded-2xl">
+                    <div class="text-red-400 font-bold mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        האשליה והמלכודת
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        בגלל שהפיתוח מהיר, המשתמשים והמיישמים מתפתים לבקש שינויים בלתי פוסקים: <span class="text-white italic">"נו, אז תשנה גם את זה, הרי ה-AI יעשה את זה בשנייה"</span>.
+                    </p>
+                </div>
+
+                <!-- Side B: The Solution -->
+                <div class="flex-1 bg-gradient-to-br from-emerald-950/20 to-slate-900 border border-emerald-500/20 p-8 rounded-2xl">
+                    <div class="text-emerald-400 font-bold mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        חוקי המשחק הקשיחים
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        <strong>היד לא תהיה קלה על ההדק!</strong> ברגע שעברנו לשלב הפיתוח, חלים חוקי בקרה קשיחים בדיוק כמו בפיתוח מסורתי. קל לפיתוח לא אומר חופשי לשינויים.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: Slogan Summary (Chosen Version) -->
+        <section id="slide-7" class="slide w-full max-w-5xl flex-col items-center text-center justify-center py-8">
+            <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 mb-8">סיכום ומחשבה להמשך</span>
+            
+            <h2 class="text-3xl md:text-5xl font-black max-w-4xl leading-tight mb-12 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-200 to-blue-400">
+                "המכונה כותבת את הקוד, אבל האדם מנווט את הדרך.<br>
+                אל תפתחו מהר יותר, תבנו נכון יותר."
+            </h2>
+
+            <div class="h-px w-32 bg-gray-800 mb-8"></div>
+            
+            <p class="text-slate-400 text-base max-w-lg leading-relaxed">
+                ה-B-MAD וה-AI הם מנוע אדיר, אבל רק עבודה מתוזמרת, משמעת תהליכית ובקרה הנדסית יביאו אותנו לקו הסיום.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer Controls & Progress Bar -->
+    <footer class="w-full px-8 py-6 flex flex-col md:flex-row justify-between items-center z-10 border-t border-gray-800/40 bg-[#050811]/80 backdrop-blur gap-4 md:gap-0">
+        <!-- Progress Dots -->
+        <div class="flex items-center gap-2" id="progress-dots">
+            <!-- Dots generated by JS -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex items-center gap-4">
+            <button onclick="prevSlide()" class="px-4 py-2 text-sm font-semibold bg-slate-900 border border-gray-800 hover:border-gray-700 hover:text-white transition rounded-xl text-slate-400">
+                הקודם
+            </button>
+            <span class="text-xs font-mono text-slate-500" id="slide-number">שקף 1 מתוך 7</span>
+            <button onclick="nextSlide()" class="px-5 py-2 text-sm font-semibold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition rounded-xl font-bold">
+                הבא
+            </button>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic -->
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 7;
+
+        function showSlide(index) {
+            if (index < 1 || index > totalSlides) return;
+            
+            // Hide all slides
+            for (let i = 1; i <= totalSlides; i++) {
+                document.getElementById(`slide-${i}`).classList.remove('active');
+            }
+            
+            // Show current slide
+            document.getElementById(`slide-${index}`).classList.add('active');
+            currentSlide = index;
+            
+            // Update Slide indicator
+            document.getElementById('slide-number').textContent = `שקף ${currentSlide} מתוך ${totalSlides}`;
+            
+            // Update dots
+            updateDots();
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        function updateDots() {
+            const container = document.getElementById('progress-dots');
+            container.innerHTML = '';
+            for (let i = 1; i <= totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentSlide ? 'bg-emerald-400 w-6' : 'bg-gray-700'}`;
+                container.appendChild(dot);
+            }
+        }
+
+        // Keyboard Controls
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                // Since it's RTL, Right Arrow means Previous Slide, Left Arrow means Next Slide
+                prevSlide();
+            } else if (e.key === 'ArrowLeft') {
+                nextSlide();
+            } else if (e.key === ' ' || e.key === 'Enter') {
+                nextSlide();
+            }
+        });
+
+        // Initialize dots
+        updateDots();
+    </script>
+</body>
+</html>
